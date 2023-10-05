@@ -1,5 +1,6 @@
 // Yvonne Aime 
 // COP3223
+// October 05, 2023
 // First Example of an array
 
 #include <stdio.h>
