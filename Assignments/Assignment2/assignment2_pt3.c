@@ -27,8 +27,8 @@ void numgenerator() {
         printf("This number: %d is divisible by 3.\n\n", random_num);
     // Checks if the generated random number is divisible by 10.
     if (random_num % 10 == 0)
-        printf("This number: %d is divisible by 10.\n", random_num);
-        
+        printf("This number: %d is divisible by 10.\n\n", random_num);
+
 }
 
 // Driver Code
