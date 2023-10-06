@@ -79,7 +79,7 @@ int main(){
     
         // Error message - displayed when user inputs a number outside of the range (1-20).
         default:
-            printf("ERR0R: You have entered a number outside of the range.\nTry Again!\n");
+            printf("ERR0R: You have entered a number outside of the range.\nTry Again!\n\n");
             // Terminates the program. 
             exit(-1);
     }

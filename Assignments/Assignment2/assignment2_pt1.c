@@ -22,7 +22,7 @@ int main() {
     long int now; 
 
     // Used to store the number of seconds in a year, month, week, day, hour
-    int year, month, week, day, hour; 
+    int year, month, week, day, hour, minute, second; 
 
     // Number of seconds since Jan 01, 1970. 
     now = time(NULL);
@@ -47,12 +47,22 @@ int main() {
     hour = now / (SECONDS_IN_MIN  * MINS_PER_HOUR);
     now -= hour * (SECONDS_IN_MIN * MINS_PER_HOUR);
 
+    // Seconds to MINUTES conversion
+    minute = now / (SECONDS_IN_MIN);
+    now -= minute * (SECONDS_IN_MIN);
+
+    // Seconds to second conversion
+    second = now;
+    
+
     // Print final results
     printf("\n%d years, ", year);
     printf("%d months, ", month);
     printf("%d weeks, ", week);
-    printf("%d day, ", day);
-    printf("and %d hours, since January 1, 1970.", hour);
+    printf("%d days, ", day);
+    printf("and %d hours, ", hour);
+    printf("%d minutes, ", minute);
+    printf("%d seconds, since January 1, 1970.\n\n ", second);
 
     return 0;
 }
