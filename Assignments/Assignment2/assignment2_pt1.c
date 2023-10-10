@@ -46,9 +46,10 @@ int main() {
     // Seconds to HOURS conversion 
     hour = now / (SECONDS_IN_MIN  * MINS_PER_HOUR);
     now -= hour * (SECONDS_IN_MIN * MINS_PER_HOUR);
+    printf("");
 
     // Seconds to MINUTES conversion
-    minute = now / (SECONDS_IN_MIN);
+    minute = (now / (SECONDS_IN_MIN));
     now -= minute * (SECONDS_IN_MIN);
 
     // Seconds to second conversion
@@ -60,9 +61,9 @@ int main() {
     printf("%d months, ", month);
     printf("%d weeks, ", week);
     printf("%d days, ", day);
-    printf("and %d hours, ", hour);
+    printf("%d hours, ", hour);
     printf("%d minutes, ", minute);
-    printf("%d seconds, since January 1, 1970.\n\n ", second);
+    printf("and %d seconds, since January 1, 1970.\n\n ", second);
 
     return 0;
 }
