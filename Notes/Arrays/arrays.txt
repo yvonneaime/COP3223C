@@ -3,7 +3,14 @@ COP3223
 Arrays
 
 Common Mistakes when using arrays:
-1. Out of bounds error: This happens
-2.
-3.
-4. 
+1. Out of bounds error: This happens when you index into an array with an invalid index 
+(or an index doesn't exist). 
+
+2. Not initializing all values of an array.
+
+3. Trying to assign an entire array a value 
+    Ex: test_scores = 7;
+    Correct: int test_scores[7];
+
+4. Not differentiating between an array index and the value stored in an array at a particular
+index.
