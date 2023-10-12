@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/yvonne/Desktop/COP3223C/Notes",
-      "program": "/Users/yvonne/Desktop/COP3223C/Notes/build/Debug/outDebug"
+      "cwd": "/Users/yvonne/Desktop/COP3223C/Notes/Arrays",
+      "program": "/Users/yvonne/Desktop/COP3223C/Notes/Arrays/build/Debug/outDebug"
     }
   ]
 }
