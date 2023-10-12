@@ -1,0 +1,22 @@
+Yvonne Aime 
+COP3223
+October 12, 2023
+
+Function Notes
+
+What is a Function? 
+A subprogram that carries a task.
+
+Rules:
+1. Give the function what it needs to finish the task (pre-test, pre-condition)
+2. Use that information so the function returns properly. (post-test, post-condition)
+
+
+General syntax of a function:
+
+return type - function name(parameters)
+
+Formal parameters - are the ones listed in the actual definition; local variables.
+
+Actual parameters - these are the values/ expressions that are calling/invoking the functiom 
+in main so it passes that data to function to be called.
