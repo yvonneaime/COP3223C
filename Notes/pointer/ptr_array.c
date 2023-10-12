@@ -1,11 +1,12 @@
 // Yvonne Aime 
 // COP3223
 // October 12, 2023
-// To access an array with elements using a pointer
+
+// To access an array with elements using a pointer.
 
 #include <stdio.h>
 
-void main() {\
+void main() {
     // Declare an array.
     int val[3] = {5, 15, 15};
 
