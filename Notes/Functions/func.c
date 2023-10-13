@@ -29,7 +29,7 @@ int main() {
 
         // Update the number of total points and total hours.
         total_points += c_hours * Comp_Grade(my_grade);
-        total_hours += c_hours + total_hours;
+        total_hours += c_hours;
 
         // See if there is another grade to get.
         printf("Do you have another grade to enter?\n");
