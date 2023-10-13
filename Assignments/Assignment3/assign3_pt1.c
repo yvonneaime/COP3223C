@@ -4,7 +4,6 @@
 
 // Lecture Assignment 3 - Part 1
 
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -30,6 +29,6 @@ int main() {
     for (i = 0; i < ARRAY_LENGTH; i++)  {
         printf("%d\n", new_array[i]);
     }
-    
+
     return 0;
 }

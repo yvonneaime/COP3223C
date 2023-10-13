@@ -22,7 +22,7 @@ int main() {
     }
     
     // Prints out the array.
-    printf("\nAll elements of the array, includes:\n ");
+    printf("\nAll elements of the array, include:\n ");
     for (i = 0; i < ARRAY_LENGTH; i++) { 
         // Converts all elements to a double format.
         printf("\n%.2lf", decimal_num[i]);
