@@ -25,7 +25,7 @@ int main()
     for (i = 0; i < 11; i++)
     {
         for (j = 0; j <= i; j++)
-            printf("%4d ", pascaltri[i][j]);
+            printf("%6d ", pascaltri[i][j]);
         printf("\n");
     }
     return 0;
