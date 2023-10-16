@@ -10,8 +10,6 @@
 
 #define ARRAY_LENGTH 100
 #define COL_LENGTH 10
-#define SPACES_WIDE 6
-
 
 int main() {
     int i;
@@ -30,8 +28,9 @@ int main() {
         if (i % COL_LENGTH == 0){
             printf("\n");
         } else {
-            // Converts all elements to a double format.
-            printf("%.2lf      ", decimal_num[i]);
+            /* Converts all elements to a floating point - 
+            at least 6 spaces wide & a precision of 2. */
+            printf("%6.2lf", decimal_num[i]);
         }
     }
 
