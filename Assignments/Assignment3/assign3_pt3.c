@@ -16,16 +16,22 @@ int main() {
 
     // Fill the array with random values between 1 and 100.
     for (i = 0; i < ARRAY_LENGTH; i++) {
-        random_array[i] = rand() % 100;
+        // 100 + 1 - so that 100 is included within the array. 
+        random_array[i] = rand() % 100 + 1;
         printf("%d\n",random_array[i]);
-        printf("\n");
     }
 
-    /*
-    Calculate the average of the values in the array. Output the average.
-    */
+    // Calculates the average of the values in the array. 
+    // sum - holds the sum of all the values in the array
+   double sum = 0, average;
+   for (i = 0; i < ARRAY_LENGTH; i++) {
+        sum += random_array[i];
+   }
+   // The average = the sum divided by the number of values in the array
+   average = sum / ARRAY_LENGTH;
 
+   // Outputs the average of the numbers in the array. 
+   printf("\nThis is the average of all the values in the array: %.2lf\n\n", average);
 
-
-    return 0;
+   return 0;
 }
