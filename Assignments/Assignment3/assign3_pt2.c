@@ -23,16 +23,14 @@ int main() {
     }
     
     // Prints out the array.
-    printf("\nAll elements of the array, include:\n ");
+    printf("\nAll elements of the array, include:\n\n");
     for (i = 0; i <= ARRAY_LENGTH; i++) {
-        if (i % COL_LENGTH == 0){
+        if (i % COL_LENGTH == 0 && i != 0){
             printf("\n");
-        } else {
-            /* Converts all elements to a floating point - 
-            at least 6 spaces wide & a precision of 2. */
-            printf("%6.2lf", decimal_num[i]);
         }
+        /* Converts all elements to a floating point - 
+            at least 6 spaces wide & a precision of 2. */
+        printf("%6.2lf", decimal_num[i]);
     }
-
     return 0;
 }
