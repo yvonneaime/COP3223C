@@ -31,7 +31,7 @@ int main() {
 
    // Outputs the average of the numbers in the array. 
    printf("\n\nThis is the sum of the array: %.lf\n", sum);
-   printf("\nThis is the average of all the values in the array: %.2lf\n\n", average);
+   printf("\n⋆.ೃ࿔ This is the average of all the values in the array: %.2lf\n\n", average);
 
    return 0;
 }

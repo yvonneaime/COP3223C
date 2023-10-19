@@ -23,7 +23,7 @@ int main() {
     }
     
     // Prints out the array.
-    printf("\nAll elements of the array, include:\n\n");
+    printf("\n\t⋆⭒˚｡⋆ All elements of the array, include: ⋆⭒˚｡⋆ \n\n");
     for (i = 0; i <= ARRAY_LENGTH; i++) {
         if (i % COL_LENGTH == 0 && i != 0){
             printf("\n");
