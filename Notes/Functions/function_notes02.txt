@@ -1,0 +1,8 @@
+Yvonne Aime 
+COP3223
+October 19, 2023
+
+Function Notes (Continued)
+
+
+void calc_grade(int grade) = void meaning no return type.
