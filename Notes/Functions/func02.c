@@ -21,6 +21,6 @@ int main() {
     scanf("%lf%lf%lf", &r1, &r2, &r3);
 
     // Calculate total volume and mass.
-    total_v =
-    total_m =
+    total_v =; 
+    total_m =;
 }   
