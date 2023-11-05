@@ -1,0 +1,6 @@
+string library - string.h library
+
+strcat = string concatenate; append words together usisng +
+strcmp = compare whether two strings are the same and have the same values.
+strcpy = add a string to another string as a copy
+strlen = returns the total # of characters
