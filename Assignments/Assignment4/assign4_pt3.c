@@ -9,7 +9,6 @@
 // Tells the compiler that there is a function named 'numCalc()'.   
 int numCalc(int a, int b, int c);
 
-
 int main() {
     // Variables used to store the user input. 
     int num1, num2, num3;

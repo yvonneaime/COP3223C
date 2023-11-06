@@ -3,13 +3,12 @@
 // October 19, 2023
 // Lecture Assignment 4 - Part B
 
-
 #include <stdio.h>
 
 char grade_calc(double grade);
 
 int main() {
-    // Declaring and initializing yourGrade -- (user input).
+    // Declaring and initializing 'yourGrade' (which represents user input).
     double yourGrade = 0.00;
 
     // Prompts the user to enter a grade in a specific format.
@@ -19,12 +18,14 @@ int main() {
     // 'letterGrade' calls grade_calc() function with one double argument.
     char letterGrade = grade_calc(yourGrade);
 
+    // Prints out final letter grade. 
     printf("\n\n｡･*˚✧｡ This is your letter grade: %c \n\n",letterGrade);
     return 0;
 }
 
 
 char grade_calc(double grade) {    
+// Variable is used to store the letter grade corresponding to the numeric grade provided. 
     char letterGrade;
 
 /*  If you pass in 90, the char returned will be ‘A’. If you pass in
@@ -41,7 +42,7 @@ char grade_calc(double grade) {
     else if (grade >= 50.00 && grade <= 59.99)
         letterGrade = 'F';
     else 
-        // Handles input outside of range. Returns 'X' to the user. 
+        // Handles input outside of range (by returning 'X' to the user). 
         letterGrade = 'X'; 
 
     return letterGrade;

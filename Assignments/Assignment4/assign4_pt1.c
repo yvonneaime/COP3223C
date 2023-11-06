@@ -7,7 +7,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-// Constant that represents the size of the array 
+// Constant that represents the size of the array. 
 #define ARRAY_LENGTH 7
 
 double average(int newArray[], int size);
@@ -21,7 +21,7 @@ int main() {
 
     double avg = average(newArray, ARRAY_LENGTH);
 
-    // Prints out average of the array
+    // Prints out the average of the array.
     printf("\n౨ৎ This is the average of the array:  %.2lf \n\n", avg);
 
     return 0;
