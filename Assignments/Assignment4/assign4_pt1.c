@@ -29,6 +29,7 @@ int main() {
 
 
 double average(int newArray[], int size) {
+    // Declaring and initializing variables.
     int i;
     double mean, sum = 0.00;
 
