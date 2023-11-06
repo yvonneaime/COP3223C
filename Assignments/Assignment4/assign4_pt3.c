@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 
+// Tells the compiler that there is a function named 'numCalc()'.   
 int numCalc(int a, int b, int c);
 
 
@@ -14,13 +15,13 @@ int main() {
     int num1, num2, num3;
 
     // Prompts user to enter three numbers. 
-    printf("\n\n✩ Please enter three integers. ✩ \n\n");
+    printf("\n\n✩ Please enter three integers ✩ \n\n");
     scanf("%d %d %d", &num1, &num2, &num3);
 
     // 'largestNum' calls numCalc() with three integer values as arguments.
     int largestNum =  numCalc(num1, num2, num3);
 
-    // Prints largest number of the three integers. 
+    // Prints out largest number of the three integers. 
     printf("\n\n\t𓍯𓂃  This is the largest integer: %d \n\n", largestNum);
 
     return 0;
@@ -29,6 +30,7 @@ int main() {
 
 // Function numCalc() takes in 3 int arguments and returns the largest of the 3. 
 int numCalc(int a, int b, int c) {
+
     // Declaring and initializing 'max' to int a.
     int max = a;
     
