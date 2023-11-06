@@ -3,10 +3,6 @@
 // October 19, 2023
 // Lecture Assignment 4 - Part A
 
-/* A.  It also returns a double. Call this one ‘average.’
- Return a double that is the average of the values in the array. 
- */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -26,7 +22,7 @@ int main() {
     double avg = average(newArray, ARRAY_LENGTH);
 
     // Prints out average of the array
-    printf("\n౨ৎ This is the average of the array:  %.2lf\n\n", avg);
+    printf("\n౨ৎ This is the average of the array:  %.2lf \n\n", avg);
 
     return 0;
  }
@@ -34,8 +30,7 @@ int main() {
 
 double average(int newArray[], int size) {
     int i;
-    double sum = 0.00;
-    double mean;
+    double mean, sum = 0.00;
 
     // Iterates through array and adds each number. 
     for (i = 0; i < size; i++) {
