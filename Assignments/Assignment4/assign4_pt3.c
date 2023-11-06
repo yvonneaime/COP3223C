@@ -17,7 +17,7 @@ int main() {
     printf("\n\n✩ Please enter three integers. ✩ \n\n");
     scanf("%d %d %d", &num1, &num2, &num3);
 
-
+    // 'largestNum' calls numCalc() with three integer values as arguments.
     int largestNum =  numCalc(num1, num2, num3);
 
     // Prints largest number of the three integers. 
