@@ -21,12 +21,12 @@ int main() {
     int newArray[ARRAY_LENGTH] = {78, 90, 56, 99, 88, 68, 92};
 
     // Prints out array.
-    printf("This is the current array:\n{78, 90, 56, 99, 88, 68, 92}\n");
+    printf("\n˖⁺‧₊˚✦\t  This is the current array  ˖⁺‧₊˚✦\n\t[78, 90, 56, 99, 88, 68, 92]\n");
 
     double avg = average(newArray, ARRAY_LENGTH);
 
     // Prints out average of the array
-    printf("\nThis is the average of that array: %.2lf\n", avg);
+    printf("\n౨ৎ This is the average of the array:  %.2lf\n\n", avg);
 
     return 0;
  }
