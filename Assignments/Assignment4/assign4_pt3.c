@@ -10,8 +10,8 @@
 int numCalc(int a, int b, int c);
 
 int main() {
-    // Variables used to store the user input.
-    int num1, num2, num3;
+    // Variables used to store the user's input.
+    int num1, num2, num3; 
 
     // Prompts user to enter three numbers. 
     printf("\n\n✩ Please enter three integers ✩ \n\n");
