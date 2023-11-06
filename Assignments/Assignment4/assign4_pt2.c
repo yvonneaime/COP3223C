@@ -16,7 +16,9 @@ int main() {
     printf("\n\nPlease enter your grade (in this format: XX.XX) .𖥔 ݁₊  \n\n");
     scanf("%lf",&yourGrade);
 
+    // 'letterGrade' calls grade_calc() function with one double argument.
     char letterGrade = grade_calc(yourGrade);
+
     printf("\n\n｡･*˚✧｡ This is your letter grade: %c \n\n",letterGrade);
     return 0;
 }
