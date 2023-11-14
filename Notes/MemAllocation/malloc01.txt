@@ -1,0 +1,16 @@
+Yvonne Aime
+COP3223
+November 14, 2023
+Malloc()
+
+
+/* Dynamic Memory Allocation */
+ Need to know: How many you have and the data type
+
+Calloc() - is a function for dynamic memory when we need
+a continuous allocation for a specified  number of blocks
+memory for a specific datatype.
+
+ptr = (cast-type*)calloc(n, element-size) 
+    // n - is the number of elements 
+    // element-size is the size of each element

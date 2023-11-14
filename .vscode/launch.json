@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/yvonne/Desktop/COP3223C/Assignments/Assignment5",
-      "program": "/Users/yvonne/Desktop/COP3223C/Assignments/Assignment5/build/Debug/outDebug"
+      "cwd": "/Users/yvonne/Desktop/COP3223C/Notes/Struct",
+      "program": "/Users/yvonne/Desktop/COP3223C/Notes/Struct/build/Debug/outDebug"
     }
   ]
 }
