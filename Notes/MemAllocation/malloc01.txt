@@ -1,11 +1,21 @@
 Yvonne Aime
 COP3223
 November 14, 2023
-Malloc()
+Malloc() and Calloc()
 
 
-/* Dynamic Memory Allocation */
- Need to know: How many you have and the data type
+- Dynamic Memory Allocation 
+ Need to know: How many you have (the size) and the data type
+
+Malloc()- 
+ptr = (cast-type*) malloc(byte-size)
+    Ex: ptr = (int*) malloc(100 * sizeof(int));
+        Since the size of int is 4 bytes, this statement will allocate 400 
+        bytes of memory. And, the pointer ptr holds the address of the 
+        first byte in the allocated memory.
+
+
+____________________________________________________________
 
 Calloc() - is a function for dynamic memory when we need
 a continuous allocation for a specified  number of blocks
@@ -14,3 +24,12 @@ memory for a specific datatype.
 ptr = (cast-type*)calloc(n, element-size) 
     // n - is the number of elements 
     // element-size is the size of each element
+_______________________________________________________________
+
+Free Space
+free() method: used to dynamically deallocate memory. In other words give
+back the memory we borrowed.
+    Ex: free(ptr)
+______ _______________
+
+Realloc() - is used to add or append more memory to what is already set aside.
