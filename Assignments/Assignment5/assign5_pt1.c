@@ -12,10 +12,15 @@
 
 void dealCards(int suitsInHand[],  int facesInHand[]);
 void analyzeHand(int suitsInHand[],  int facesInHand[]);
+void anotherHand();
 
 int main() {
+    
     // Used for seeding random number (shuffling cards).
     srand(time(NULL));
+    // Calling twice
+    anotherHand();
+    anotherHand();
 
     // suitsInHand[] and facesInHand[] array - all counters set to 0.
     int suitsInHand[SUITS] = {0};
@@ -37,6 +42,29 @@ int main() {
     analyzeHand(suitsInHand, facesInHand);
 
     return 0;
+}
+
+void anotherHand() {
+    // suitsInHand[] and facesInHand[] array - all counters set to 0.
+    int suitsInHand[SUITS] = {0};
+    int facesInHand[FACES] = {0};  
+
+    // Call dealCards() function to deal a hand.
+    dealCards(suitsInHand, facesInHand);
+
+    // Print the suits in a hand.
+    printf("\nSuits in hand: Hearts = %d, Clubs = %d, Diamonds = %d, Spades = %d\n\n",
+           suitsInHand[0], suitsInHand[1], suitsInHand[2], suitsInHand[3]);
+    // Print the faces in a hand. 
+    printf("Faces in hand: ");
+    for (int i = 0; i < FACES; ++i) {
+        printf("%d ", facesInHand[i]);
+    }
+    printf("\n\n"); // For formatting. 
+    // Call analyzeHand() function to analyze the hand.
+    analyzeHand(suitsInHand, facesInHand);
+    printf()
+
 }
 
 /*  
@@ -98,24 +126,42 @@ void analyzeHand(int suitsInHand[],  int facesInHand[]) {
             pairs++;
         }
     // Prints out final results. 
-        if (straight && flush)
+        if (straight && flush) {
             printf("Straight flush\n\n");
-        else if (four)
+            return 8;
+            }
+        else if (four) {
             printf("Four of a kind\n\n");
-        else if (three && pairs == 1)
-                printf("Full house\n\n");
-        else if (flush)
+            return 7;
+            }
+        else if (three && pairs == 1) {
+            printf("Full house\n\n");
+            return 6;
+            }
+        else if (flush) {
             printf("Flush\n\n");
-        else if (straight)
+            return 5;
+            }
+        else if (straight) {
             printf("Straight\n\n");
-        else if (three)
+            return 4;
+            }
+        else if (three){
             printf("You have: Three of a kind.\n\n");
-        else if (pairs == 2)
+            return 3;
+            }
+        else if (pairs == 2) {
             printf("Two pairs\n\n");
-        else if (pairs == 1)
+            return 2;
+        }
+        else if (pairs == 1) {
             printf("You have a Pair.\n\n");
-        else
+            return 1;
+        }
+        else {
             printf("High card\n\n");
+            return 0;
+        }
 }
 
 
