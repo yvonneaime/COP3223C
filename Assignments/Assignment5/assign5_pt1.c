@@ -11,40 +11,30 @@
 #define FACES 13 // Use 13 for faces (2 through King)
 
 void dealCards(int suitsInHand[],  int facesInHand[]);
-void analyzeHand(int suitsInHand[],  int facesInHand[]);
-void anotherHand();
+int analyzeHand(int suitsInHand[],  int facesInHand[]);
+int anotherHand();
 
 int main() {
-    
+    int hand1 = 0, hand2 = 0;
+
     // Used for seeding random number (shuffling cards).
     srand(time(NULL));
+
     // Calling twice
-    anotherHand();
-    anotherHand();
+    hand1 = anotherHand();
+    hand2 = anotherHand();
 
-    // suitsInHand[] and facesInHand[] array - all counters set to 0.
-    int suitsInHand[SUITS] = {0};
-    int facesInHand[FACES] = {0};  
-
-    // Call dealCards() function to deal a hand.
-    dealCards(suitsInHand, facesInHand);
-
-    // Print the suits in a hand.
-    printf("\nSuits in hand: Hearts = %d, Clubs = %d, Diamonds = %d, Spades = %d\n\n",
-           suitsInHand[0], suitsInHand[1], suitsInHand[2], suitsInHand[3]);
-    // Print the faces in a hand. 
-    printf("Faces in hand: ");
-    for (int i = 0; i < FACES; ++i) {
-        printf("%d ", facesInHand[i]);
-    }
-    printf("\n\n"); // For formatting. 
-    // Call analyzeHand() function to analyze the hand.
-    analyzeHand(suitsInHand, facesInHand);
+    if (hand1 > hand2) 
+        printf("Hand 1 has won the game!\n");
+    else if (hand2 > hand1)
+        printf("Hand 2 has won the game!\n");
+    else 
+        printf("It's a tie!\n");
 
     return 0;
 }
 
-void anotherHand() {
+int anotherHand() {
     // suitsInHand[] and facesInHand[] array - all counters set to 0.
     int suitsInHand[SUITS] = {0};
     int facesInHand[FACES] = {0};  
@@ -62,8 +52,7 @@ void anotherHand() {
     }
     printf("\n\n"); // For formatting. 
     // Call analyzeHand() function to analyze the hand.
-    analyzeHand(suitsInHand, facesInHand);
-    printf()
+    return analyzeHand(suitsInHand, facesInHand);
 
 }
 
@@ -90,7 +79,7 @@ void dealCards(int suitsInHand[],  int facesInHand[]) {
 // You will need to pass in the hand of cards, and have the function pass back if there is
 // a flush, straight, three of a kind, etc.
 
-void analyzeHand(int suitsInHand[],  int facesInHand[]) {
+int analyzeHand(int suitsInHand[],  int facesInHand[]) {
     int num_consec = 0;
     int rank, suit;
     int straight = 0;   // 0 - FALSE.
@@ -114,7 +103,7 @@ void analyzeHand(int suitsInHand[],  int facesInHand[]) {
         num_consec++;
     if (num_consec == 5) {
         straight = 1; // 1 = TRUE.
-        return;
+        //return;
     }
     // Check for 4-of-a-kind, 3-of-a-kind, and pairs. 
     for (rank = 0; rank < FACES; rank++) {
@@ -139,11 +128,11 @@ void analyzeHand(int suitsInHand[],  int facesInHand[]) {
             return 6;
             }
         else if (flush) {
-            printf("Flush\n\n");
+            printf("Flush.\n\n");
             return 5;
             }
         else if (straight) {
-            printf("Straight\n\n");
+            printf("Straight.\n\n");
             return 4;
             }
         else if (three){
@@ -151,7 +140,7 @@ void analyzeHand(int suitsInHand[],  int facesInHand[]) {
             return 3;
             }
         else if (pairs == 2) {
-            printf("Two pairs\n\n");
+            printf("Two pairs.\n\n");
             return 2;
         }
         else if (pairs == 1) {
@@ -159,7 +148,7 @@ void analyzeHand(int suitsInHand[],  int facesInHand[]) {
             return 1;
         }
         else {
-            printf("High card\n\n");
+            printf("High card.\n\n");
             return 0;
         }
 }
