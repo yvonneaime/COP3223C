@@ -1,35 +1,37 @@
 // Yvonne Aime 
 // COP3223
 // November 06, 2023
-// Lecture Assignment 5 - Part 1
+// Lecture Assignment 5 
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #define SUITS 4
-#define FACES 13 // Use 13 for faces (2 through King)
+#define FACES 13 // Use 13 for faces (1 through King)
 
 void dealCards(int suitsInHand[],  int facesInHand[]);
 int analyzeHand(int suitsInHand[],  int facesInHand[]);
 int anotherHand();
 
 int main() {
+    // Represents the two different hands (which will be compared)
     int hand1 = 0, hand2 = 0;
 
     // Used for seeding random number (shuffling cards).
     srand(time(NULL));
 
-    // Calling twice
+    // Setting each hand to the function anotherHand()
     hand1 = anotherHand();
     hand2 = anotherHand();
 
+    // Computes the final results between the two hands.
     if (hand1 > hand2) 
         printf("Hand 1 has won the game!\n");
     else if (hand2 > hand1)
         printf("Hand 2 has won the game!\n");
     else 
-        printf("It's a tie!\n");
+        printf("It's a tie!!\n");
 
     return 0;
 }
@@ -82,11 +84,11 @@ void dealCards(int suitsInHand[],  int facesInHand[]) {
 int analyzeHand(int suitsInHand[],  int facesInHand[]) {
     int num_consec = 0;
     int rank, suit;
-    int straight = 0;   // 0 - FALSE.
+    int straight = 0;   // 0 - used to represent the boolean statement 'FALSE'
     int flush = 0;      // 0 - FALSE.
     int four = 0;       // 0 - FALSE.
     int three = 0;      // 0 - FALSE.
-    int pairs = 0;
+    int pairs = 0;      // 0 - FALSE.
 
     // check for flush – 5 cards of the same suit
     for (suit = 0; suit < SUITS; suit++)
@@ -117,7 +119,7 @@ int analyzeHand(int suitsInHand[],  int facesInHand[]) {
     // Prints out final results. 
         if (straight && flush) {
             printf("Straight flush\n\n");
-            return 8;
+            return 8; // Used to compare the who wins (the larger # wins).
             }
         else if (four) {
             printf("Four of a kind\n\n");
