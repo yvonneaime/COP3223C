@@ -27,11 +27,11 @@ int main() {
 
     // Computes the final results between the two hands.
     if (hand1 > hand2) 
-        printf("Hand 1 has won the game!\n");
+        printf("Hand 1 has won the game!\n\n");
     else if (hand2 > hand1)
-        printf("Hand 2 has won the game!\n");
+        printf("Hand 2 has won the game!\n\n");
     else 
-        printf("It's a tie!!\n");
+        printf("It's a tie!!\n\n");
 
     return 0;
 }
